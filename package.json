@@ -1,0 +1,20 @@
+{
+  "name": "graphql-api",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.18.2",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "graphql": "^15.3.0",
+    "graphql-playground-middleware-express": "^1.7.21",
+    "mongoose": "^5.10.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
