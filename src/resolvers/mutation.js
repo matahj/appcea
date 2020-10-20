@@ -5,6 +5,7 @@ const { GroupModel } = require('../models/Group');
 const { RecordModel } = require('../models/Record');
 
 const bcrypt = require('bcryptjs');
+const { ActivityModel } = require('../models/Activity');
 
 const Mutation = {
 
@@ -64,6 +65,16 @@ const Mutation = {
     });
     await newRecord.save();
     return newRecord;
+  },
+
+  createActivity: async (parent, { input }) => {
+    const newActivity = new ActivityModel({
+      user: input.user,
+      tIni: input.tIni,
+      tFin: input.tFin,
+    });
+    await newActivity.save();
+    return newActivity;
   },
   
 };

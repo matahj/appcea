@@ -3,6 +3,7 @@ const { ResourceModel } = require('../models/Resource');
 const { UserModel } = require('../models/User');
 const { GroupModel } = require('../models/Group');
 const { RecordModel } = require('../models/Record');
+const { ActivityModel } = require('../models/Activity');
 
 const Query = {
 
@@ -33,6 +34,11 @@ const Query = {
   records: async () => {
     const records = await RecordModel.find();
     return records;
+  },
+
+  activities: async() => {
+    const activities = await ActivityModel.find();
+    return activities;
   },
   
 };

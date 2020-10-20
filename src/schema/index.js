@@ -9,7 +9,7 @@ const typeDefs = gql`
     users: [User]
     groups: [Group]
     records: [Record]
-    # activities: [Activity]
+    activities: [Activity]
   }
 
   type Mutation {
@@ -18,8 +18,7 @@ const typeDefs = gql`
     createUser(input: InputCreateUser!): User
     createGroup(input: InputCreateGroup!): Group
     createRecord(input: InputCreateRecord!): Record
-    # createActivity(input: InputCreateActivity!): Activity
-
+    createActivity(input: InputCreateActivity!): Activity
   }
 
   type Room {
@@ -64,12 +63,12 @@ const typeDefs = gql`
     comment: String
   }
 
-  # type Activity {
-  #   _id: ID
-  #   user: String
-  #   tIni: String
-  #   tFin: String
-  # }
+  type Activity {
+    _id: ID
+    user: ID
+    tIni: String
+    tFin: String
+  }
 
   input InputCreateRoom {
     code: String!
@@ -108,11 +107,11 @@ const typeDefs = gql`
     comment: String
   }
 
-  # input InputCreateActivity {
-  #   user: String!
-  #   tIni: String!
-  #   tFin: String
-  # }
+  input InputCreateActivity {
+    user: ID!
+    tIni: String!
+    tFin: String
+  }
 
 `;
 

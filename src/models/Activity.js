@@ -1,4 +1,4 @@
-const mongoose = require('mongose');
+const mongoose = require('mongoose');
 
 // Schema
 const ActivitySchema = new mongoose.Schema({
@@ -6,8 +6,8 @@ const ActivitySchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-    tIni: timestamps,
-    tFin: timestamps,
+    tIni: String,
+    tFin: String,
 },{
     timestamps: true,
 });
