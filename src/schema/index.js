@@ -10,6 +10,9 @@ const typeDefs = gql`
     groups: [Group]
     records: [Record]
     activities: [Activity]
+
+    user(id: ID!): User
+    userReg(register: String!): User
   }
 
   type Mutation {

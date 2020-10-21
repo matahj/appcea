@@ -36,11 +36,19 @@ const Query = {
     return records;
   },
 
-  activities: async() => {
+  activities: async () => {
     const activities = await ActivityModel.find();
     return activities;
   },
-  
+
+  user: (_, { id }) => {
+    return UserModel.findOne({ _id: id });
+  },
+
+  userReg: (_, { register }) => {
+    return UserModel.findOne({ register: register });
+  }
+
 };
 
 module.exports = Query;
