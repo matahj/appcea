@@ -31,7 +31,7 @@ const Mutation = {
   createUser: async (parent, { input }) => {
     const encryptedPassword = await bcrypt.hash(input.password, 10);
     const newUser = new UserModel({
-      register: input.register,
+      account: input.account,
       name: input.name,
       email: input.email,
       role: input.role,

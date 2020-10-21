@@ -41,13 +41,21 @@ const Query = {
     return activities;
   },
 
-  user: (_, { id }) => {
+  userId: (_, { id }) => {
     return UserModel.findOne({ _id: id });
   },
 
-  userReg: (_, { register }) => {
-    return UserModel.findOne({ register: register });
-  }
+  userAccount: (_, { account }) => {
+    return UserModel.findOne({ account: account });
+  },
+
+  groupId: (_, { id }) => {
+    return GroupModel.findOne({ _id: id });
+  },
+
+  groupCode: (_, { code }) => {
+    return GroupModel.findOne({ code: code });
+  },
 
 };
 

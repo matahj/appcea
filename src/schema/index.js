@@ -11,8 +11,11 @@ const typeDefs = gql`
     records: [Record]
     activities: [Activity]
 
-    user(id: ID!): User
-    userReg(register: String!): User
+    userId(id: ID!): User
+    userAccount(account: String!): User
+
+    groupId(id: ID!): Group
+    groupCode(code: String!) : Group
   }
 
   type Mutation {
@@ -39,7 +42,7 @@ const typeDefs = gql`
 
   type User {
     _id: ID
-    register: String
+    account: String
     name: String
     email: String
     role: String
@@ -85,7 +88,7 @@ const typeDefs = gql`
   }
 
   input InputCreateUser {
-    register: String!
+    account: String!
     name: String!
     email: String!
     role: String!
