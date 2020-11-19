@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Schema
-const RecordSchema = new mongoose.Schema({
+const RegistrySchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
@@ -22,5 +22,6 @@ const RecordSchema = new mongoose.Schema({
 });
 
 // Mongoose model
-const RecordModel = mongoose.model('Record', RecordSchema);
-module.exports = { RecordModel, RecordSchema };
+const RegistryModel = mongoose.model('Registry', RegistrySchema);
+
+module.exports = { RegistryModel, RegistrySchema };

@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
   account: String,
   name: String,
   email: String,
-  role: String,
+  role: String, // admin|profesor|alumno
   password: String,
   group: {
     type: mongoose.Schema.Types.ObjectId,
@@ -17,4 +17,5 @@ const UserSchema = new mongoose.Schema({
 
 //Mongoose model
 const UserModel = mongoose.model('User', UserSchema);
+
 module.exports = { UserModel, UserSchema };
