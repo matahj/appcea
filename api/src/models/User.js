@@ -10,7 +10,8 @@ const UserSchema = new mongoose.Schema({
   group: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Group',
-  }
+  },
+  enroll: Boolean
 },{
   timestamps: true,
 });

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const ResourceSchema = new mongoose.Schema({
-  code: String,
+  code: Number,
   name: String,
   description: String,
   room: {

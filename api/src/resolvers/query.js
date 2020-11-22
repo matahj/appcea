@@ -2,6 +2,8 @@ const { RoomModel } = require("../models/Room");
 const { ResourceModel } = require("../models/Resource");
 const { UserModel } = require("../models/User");
 const { GroupModel } = require("../models/Group");
+const { RegistryModel } = require("../models/Registry");
+const { ActivityModel } = require("../models/Activity");
 
 const Query = {
 
@@ -24,6 +26,14 @@ const Query = {
     groups: async () => {
         const groups = await GroupModel.find();
         return groups
+    },
+    registers: async () => {
+        const registers = await RegistryModel.find();
+        return registers;
+    },
+    activities: async () => {
+        const activities = await ActivityModel.find();
+        return activities;
     }
 
 
